@@ -7,6 +7,7 @@
 //
 
 #import "SecCircleLayer.h"
+#import "COLOR.h"
 
 @implementation SecCircleLayer
 

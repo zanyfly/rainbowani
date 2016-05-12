@@ -7,6 +7,7 @@
 //
 
 #import "TrdCircleLayer.h"
+#import "COLOR.h"
 
 @implementation TrdCircleLayer
 

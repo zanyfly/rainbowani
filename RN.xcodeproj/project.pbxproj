@@ -67,6 +67,7 @@
 		6F77C6191C279C030058EB89 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
 		6F77C61B1C279C4F0058EB89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6F77C61D1C279CA80058EB89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6F81CBA81CE46D9900869232 /* COLOR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COLOR.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 				6F3BEE091C2CF6C8004686FC /* SecCircleLayer.m */,
 				6F61814C1C2D184D00D89353 /* TrdCircleLayer.h */,
 				6F61814D1C2D184D00D89353 /* TrdCircleLayer.m */,
+				6F81CBA81CE46D9900869232 /* COLOR.h */,
 				6F77C5EE1C2790DB0058EB89 /* Main.storyboard */,
 				6F77C5F11C2790DB0058EB89 /* Assets.xcassets */,
 				6F77C5F31C2790DB0058EB89 /* LaunchScreen.storyboard */,

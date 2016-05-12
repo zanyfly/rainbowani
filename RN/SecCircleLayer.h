@@ -7,10 +7,11 @@
 //
 
 #import "CircleLayer.h"
+#import "COLOR.h"
 
-#define SEC_FIR_CLOR [UIColor yellowColor]
-#define SEC_SEN_CLOR [UIColor blueColor]
-#define SEC_TRD_CLOR [UIColor redColor]
+#define SEC_FIR_CLOR T2_COLOR
+#define SEC_SEN_CLOR T3_COLOR
+#define SEC_TRD_CLOR T1_COLOR
 
 
 @interface SecCircleLayer : CircleLayer

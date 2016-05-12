@@ -8,6 +8,10 @@
 //
 
 #import "RainbowView.h"
+#import "CircleLayer.h"
+#import "SecCircleLayer.h"
+#import "TrdCircleLayer.h"
+
 
 @interface RainbowView ()
 @end
@@ -21,9 +25,22 @@
 //    [self doStep1];
 }
 
+-(void)stopAnimation{
+    [self reset];
+}
+
+
 #pragma mark - animation
 - (void)reset {
+    [arcToCircleLayer removeAllAnimations];
     [arcToCircleLayer removeFromSuperlayer];
+
+    [secCircleLayer removeAllAnimations];
+    [secCircleLayer removeFromSuperlayer];
+    
+    [thdCircleLayer removeAllAnimations];
+    [thdCircleLayer removeFromSuperlayer];
+
 }
 
 
@@ -33,7 +50,6 @@
     
     [self.layer addSublayer:arcToCircleLayer];
     
-//    宽40  彩虹宽4
     
     arcToCircleLayer.bounds = CGRectMake(0, 0, kRadius * 2 + kLineWidth, kRadius * 2 + kLineWidth);
     arcToCircleLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
@@ -43,35 +59,35 @@
     
     secCircleLayer=[[SecCircleLayer alloc]init];
     [self.layer addSublayer:secCircleLayer];
-    secCircleLayer.bounds = CGRectMake(0, 0, arcToCircleLayer.bounds.size.width -  2*kLineWidth, arcToCircleLayer.bounds.size.width -  2*kLineWidth);
+    secCircleLayer.bounds = CGRectMake(0, 0, arcToCircleLayer.bounds.size.width -  2*kLineWidth +1, arcToCircleLayer.bounds.size.width -  2*kLineWidth +1);
     secCircleLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
     
     thdCircleLayer=[[TrdCircleLayer alloc]init];
     [self.layer addSublayer:thdCircleLayer];
-    thdCircleLayer.bounds = CGRectMake(0, 0, secCircleLayer.bounds.size.width -  2*kLineWidth, secCircleLayer.bounds.size.width -  2*kLineWidth);
+    thdCircleLayer.bounds = CGRectMake(0, 0, secCircleLayer.bounds.size.width -  2*kLineWidth+1, secCircleLayer.bounds.size.width -  2*kLineWidth+1);
     thdCircleLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"progress"];
-    animation.duration = 4;
+    animation.duration = 3;
     animation.fromValue = @1;
-    animation.toValue = @4;
+    animation.toValue = @2.5;
     animation.repeatCount = MAXFLOAT;
     [arcToCircleLayer addAnimation:animation forKey:nil];
     
     
     animation = [CABasicAnimation animationWithKeyPath:@"progress"];
-    animation.duration = 4;
+    animation.duration =3;
     animation.fromValue = @1;
-    animation.toValue = @4;
+    animation.toValue = @2.5;
     animation.repeatCount = MAXFLOAT;
     [secCircleLayer addAnimation:animation forKey:nil];
     
     animation = [CABasicAnimation animationWithKeyPath:@"progress"];
-    animation.duration = 4;
+    animation.duration = 3;
     animation.fromValue = @1;
-    animation.toValue = @4;
+    animation.toValue = @2.5;
     animation.repeatCount = MAXFLOAT;
     [thdCircleLayer addAnimation:animation forKey:nil];
 

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CircleLayer.h"
-#import "SecCircleLayer.h"
-#import "TrdCircleLayer.h"
+
+@class CircleLayer;
+@class SecCircleLayer;
+@class TrdCircleLayer;
+
 
 @interface RainbowView : UIView{
     CircleLayer *arcToCircleLayer;
@@ -17,5 +19,5 @@
     TrdCircleLayer *thdCircleLayer;
 }
 - (void)startAnimation;
-
+-(void)stopAnimation;
 @end

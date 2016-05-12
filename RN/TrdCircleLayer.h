@@ -8,9 +8,9 @@
 
 #import "CircleLayer.h"
 
-#define THR_FIR_CLOR  [UIColor blueColor]
-#define THR_SEN_CLOR  [UIColor redColor]
-#define THR_TRD_CLOR  [UIColor yellowColor]
+#define THR_FIR_CLOR  T3_COLOR
+#define THR_SEN_CLOR  T1_COLOR
+#define THR_TRD_CLOR  T2_COLOR
 
 
 @interface TrdCircleLayer : CircleLayer

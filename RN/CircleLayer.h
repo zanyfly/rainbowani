@@ -10,16 +10,15 @@
 #import <UIKit/UIKit.h>
 
 
-
-#define FIR_CLOR [UIColor redColor]
-#define SEN_CLOR [UIColor yellowColor]
-#define TRD_CLOR [UIColor blueColor]
-
+#define FIR_CLOR T1_COLOR
+#define SEN_CLOR T2_COLOR
+#define TRD_CLOR T3_COLOR
 
 
-#define kLineWidth 5.f
 
-#define kRadius    22.f
+#define kLineWidth 8.f
+
+#define kRadius    40.f
 
 
 @interface CircleLayer : CALayer
@@ -33,13 +32,6 @@
 // First, second, third color for animating
 
 @property (nonatomic) CGFloat progress;
-
--(id)init;
-//
-//@property (weak, nonatomic) UIColor *firstColor;
-//@property (weak, nonatomic) UIColor *secondColor;
-//@property (weak, nonatomic) UIColor *thirdColor;
-
 
 -(void) startAnimation;
 
